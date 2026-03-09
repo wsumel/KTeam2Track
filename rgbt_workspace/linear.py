@@ -229,7 +229,7 @@ def process_folder(folder, folder2=None, mode="fill", min_neighbors=1, num_input
     base_out = Path(outputdir) if (outputdir is not None and str(outputdir) != "") else folder.parent
 
     if mode in ("fill", "both"):
-        save_folder = base_out / (folder.name + "_linear")
+        save_folder = base_out #/ (folder.name + "_linear")
         save_folder.mkdir(parents=True, exist_ok=True)
 
     if mode in ("predict", "both"):
@@ -275,7 +275,7 @@ def process_folder(folder, folder2=None, mode="fill", min_neighbors=1, num_input
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="linear.py：线性插值/外推填补与预测")
-    parser.add_argument("--folder", type=str, default="/disk3/wsl_tmp/Workspace210/MDTrack/results/RGBT234/mdtrack_b224_lasher_29_2")
+    parser.add_argument("--folder", type=str, default="")
     parser.add_argument("--folder2", type=str, default='', help="可选：用于先填补 primary 的第二目录（会优先用 folder2 非 -1 值填补 primary 的 -1）")
     parser.add_argument("--mode", choices=("fill", "predict", "both"), default="fill")
     parser.add_argument("--min-neighbors", type=int, default=1, help="两侧至少各需多少帧才做线性插值，默认1")
