@@ -8,7 +8,7 @@ Official repository for **KTeam2Track**.
 
 1. Clone the repository and configure the environment by following the project instructions.
 2. Download the pretrained weights and place them in the specified directory.
-3. Modify the dataset path and checkpoint path according to your local setup.
+3. Modify the **dataset path** and **checkpoint path** according to your local setup.
 4. Run the test script:
 
 ## Install the environment
